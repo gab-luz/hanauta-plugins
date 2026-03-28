@@ -1,17 +1,107 @@
 {
   "standards": {
-    "version": 2,
+    "version": 3,
+    "status": "draft-proposal",
+    "schema": {
+      "plugin_required_fields": ["id", "name", "repo"],
+      "plugin_optional_fields": [
+        "description",
+        "branch",
+        "path",
+        "entrypoint",
+        "capabilities",
+        "requirements",
+        "api_min_version",
+        "api_target_version",
+        "permissions",
+        "compatibility",
+        "x-<vendor-field>"
+      ],
+      "reserved_prefixes": ["x-"],
+      "notes": [
+        "Unknown top-level and plugin-level fields must be ignored by clients.",
+        "New plugin API fields must be additive first; removals require deprecation cycle."
+      ]
+    },
     "plugin_api": {
-      "optional_helpers": [
+      "stable_optional_helpers": [
         "polkit_available",
         "build_polkit_command",
         "run_with_polkit",
         "trigger_fullscreen_alert"
+      ],
+      "proposed_helpers": [
+        "notify",
+        "open_popup",
+        "register_quick_setting_tile",
+        "register_launcher_command",
+        "add_status_chip",
+        "workspace_event_stream",
+        "window_event_stream",
+        "theme_tokens",
+        "on_theme_changed",
+        "privileged_task",
+        "fullscreen_overlay",
+        "background_task_scheduler",
+        "state_store",
+        "secure_secret_store",
+        "dbus_bridge",
+        "system_metrics_feed",
+        "media_controls_api",
+        "context_menu_api",
+        "permissions_manifest",
+        "plugin_health_panel"
       ]
+    },
+    "capability_registry": [
+      "notifications",
+      "popup_host",
+      "quick_settings",
+      "launcher_commands",
+      "status_chips",
+      "workspace_events",
+      "window_events",
+      "theme_tokens",
+      "theme_reactive",
+      "polkit",
+      "fullscreen_alert",
+      "fullscreen_overlay",
+      "task_scheduler",
+      "state_store",
+      "secret_store",
+      "dbus",
+      "system_metrics",
+      "media_controls",
+      "context_menu",
+      "permissions_manifest",
+      "plugin_health"
+    ],
+    "compatibility_rules": {
+      "api_versioning": "integer, major-only (1, 2, 3, ...)",
+      "plugin_defaults": {
+        "api_min_version": 1,
+        "api_target_version": 1,
+        "capabilities": [],
+        "requirements": [],
+        "permissions": {}
+      },
+      "loader_behavior": [
+        "If host_api_version < plugin.api_min_version, plugin is shown as incompatible and is not loaded.",
+        "If plugin.api_target_version > host_api_version, plugin may load in compatibility mode if api_min_version is satisfied.",
+        "Unknown capabilities and permissions must be ignored, not treated as hard errors."
+      ],
+      "deprecation_policy": {
+        "minimum_notice_releases": 2,
+        "minimum_notice_days": 60,
+        "removal_requires_major_bump": true
+      }
     },
     "catalog_fields": {
       "capabilities": "optional list (or boolean map) of declared features, e.g. polkit, fullscreen_alert",
-      "requirements": "optional list of runtime requirements, e.g. pkexec"
+      "requirements": "optional list of runtime requirements, e.g. pkexec",
+      "api_min_version": "optional int, minimum host plugin API required",
+      "api_target_version": "optional int, host API version the plugin is built against",
+      "permissions": "optional object for explicit runtime intents (polkit, notifications, overlay, network, fs)"
     }
   },
   "plugins": [
