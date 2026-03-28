@@ -1,4 +1,19 @@
 {
+  "standards": {
+    "version": 2,
+    "plugin_api": {
+      "optional_helpers": [
+        "polkit_available",
+        "build_polkit_command",
+        "run_with_polkit",
+        "trigger_fullscreen_alert"
+      ]
+    },
+    "catalog_fields": {
+      "capabilities": "optional list (or boolean map) of declared features, e.g. polkit, fullscreen_alert",
+      "requirements": "optional list of runtime requirements, e.g. pkexec"
+    }
+  },
   "plugins": [
     {
       "id": "study_tracker_widget",
@@ -7,7 +22,9 @@
       "repo": "https://github.com/gab-luz/hanauta-plugin-study-tracker",
       "branch": "main",
       "path": "",
-      "entrypoint": "study_tracker_popup.py"
+      "entrypoint": "study_tracker_popup.py",
+      "capabilities": [],
+      "requirements": []
     },
     {
       "id": "ani_cli_widget",
@@ -16,7 +33,9 @@
       "repo": "https://github.com/gab-luz/hanauta-plugin-ani-cli",
       "branch": "main",
       "path": "",
-      "entrypoint": "ani_cli_fullscreen.py"
+      "entrypoint": "ani_cli_fullscreen.py",
+      "capabilities": [],
+      "requirements": []
     }
   ]
 }
