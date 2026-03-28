@@ -1,0 +1,13 @@
+{
+  "plugins": [
+    {
+      "id": "study_tracker_widget",
+      "name": "Study Tracker Widget",
+      "description": "Study tracker popup with real-time stats for Hanauta.",
+      "repo": "https://github.com/gab-luz/hanauta-plugin-study-tracker",
+      "branch": "main",
+      "path": "",
+      "entrypoint": "study_tracker_popup.py"
+    }
+  ]
+}
