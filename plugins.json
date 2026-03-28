@@ -8,6 +8,15 @@
       "branch": "main",
       "path": "",
       "entrypoint": "study_tracker_popup.py"
+    },
+    {
+      "id": "ani_cli_widget",
+      "name": "Ani CLI Fullscreen",
+      "description": "Fullscreen Ani CLI discover launcher with random anime picks and bar integration.",
+      "repo": "https://github.com/gab-luz/hanauta-plugin-ani-cli",
+      "branch": "main",
+      "path": "",
+      "entrypoint": "ani_cli_fullscreen.py"
     }
   ]
 }
