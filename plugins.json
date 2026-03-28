@@ -126,6 +126,22 @@
       "entrypoint": "ani_cli_fullscreen.py",
       "capabilities": [],
       "requirements": []
+    },
+    {
+      "id": "rss_widget",
+      "name": "RSS Widget",
+      "description": "RSS reader widget decoupled from core Hanauta as a downloadable plugin.",
+      "repo": "https://github.com/gab-luz/hanauta-plugin-rss",
+      "branch": "main",
+      "path": "",
+      "entrypoint": "rss_widget.py",
+      "capabilities": [
+        "status_chips"
+      ],
+      "requirements": [],
+      "api_min_version": 1,
+      "api_target_version": 1,
+      "permissions": {}
     }
   ]
 }
