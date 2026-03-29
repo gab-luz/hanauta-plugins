@@ -142,6 +142,46 @@
       "api_min_version": 1,
       "api_target_version": 1,
       "permissions": {}
+    },
+    {
+      "id": "battery_management",
+      "name": "Battery Management",
+      "description": "Monitor laptop and Logitech wireless device battery levels with beautiful UI.",
+      "repo": "https://github.com/gab-luz/hanauta-plugin-battery-management",
+      "branch": "main",
+      "path": "",
+      "entrypoint": "battery_management_app.py",
+      "capabilities": [
+        "notifications",
+        "polkit"
+      ],
+      "requirements": ["pkexec"],
+      "api_min_version": 1,
+      "api_target_version": 1,
+      "permissions": {
+        "package_install": true,
+        "desktop_files": true
+      }
+    },
+    {
+      "id": "usb_devices_widget",
+      "name": "USB Manager",
+      "description": "Quick USB drive manager with bar icon, open-in-explorer, safe eject, and plug/eject notifications.",
+      "repo": "https://github.com/gab-luz/hanauta-plugin-usb-volume-manager",
+      "branch": "main",
+      "path": "",
+      "entrypoint": "usb_devices_popup.py",
+      "capabilities": [
+        "notifications",
+        "status_chips"
+      ],
+      "requirements": [
+        "lsblk",
+        "notify-send"
+      ],
+      "api_min_version": 1,
+      "api_target_version": 1,
+      "permissions": {}
     }
   ]
 }
