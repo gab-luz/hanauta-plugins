@@ -208,6 +208,29 @@
         "package_install": true,
         "network": true
       }
+    },
+    {
+      "id": "vpn_control",
+      "name": "VPN Control",
+      "description": "WireGuard control popup with split-tunnel launcher helpers and bar integration support.",
+      "repo": "https://github.com/gab-luz/hanauta-plugin-vpn-control",
+      "branch": "main",
+      "path": "",
+      "entrypoint": "vpn_control.py",
+      "capabilities": [
+        "status_chips",
+        "polkit",
+        "permissions_manifest"
+      ],
+      "requirements": [
+        "pkexec",
+        "wireguard-tools"
+      ],
+      "api_min_version": 1,
+      "api_target_version": 1,
+      "permissions": {
+        "network": true
+      }
     }
   ]
 }
