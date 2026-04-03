@@ -182,6 +182,32 @@
       "api_min_version": 1,
       "api_target_version": 1,
       "permissions": {}
+    },
+    {
+      "id": "printer_widget",
+      "name": "Printer Widget",
+      "description": "Production-quality printer status and queue widget with quick recovery actions for CUPS/IPP.",
+      "repo": "https://github.com/gab-luz/hanauta-plugin-printer",
+      "branch": "main",
+      "path": "",
+      "entrypoint": "printer_popup.py",
+      "capabilities": [
+        "notifications",
+        "status_chips",
+        "polkit",
+        "permissions_manifest"
+      ],
+      "requirements": [
+        "pkexec",
+        "cups",
+        "python3-cups"
+      ],
+      "api_min_version": 1,
+      "api_target_version": 1,
+      "permissions": {
+        "package_install": true,
+        "network": true
+      }
     }
   ]
 }
