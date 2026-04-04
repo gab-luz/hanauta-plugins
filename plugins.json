@@ -231,6 +231,24 @@
       "permissions": {
         "network": true
       }
+    },
+    {
+      "id": "game_mode",
+      "name": "Game Mode",
+      "description": "Game Mode popup with gamemoded status insights and bar integration.",
+      "repo": "https://github.com/gab-luz/hanauta-plugin-game-mode",
+      "branch": "main",
+      "path": "",
+      "entrypoint": "game_mode_popup.py",
+      "capabilities": [
+        "status_chips"
+      ],
+      "requirements": [
+        "gamemode"
+      ],
+      "api_min_version": 1,
+      "api_target_version": 1,
+      "permissions": {}
     }
   ]
 }
