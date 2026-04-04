@@ -3,7 +3,11 @@
     "version": 3,
     "status": "draft-proposal",
     "schema": {
-      "plugin_required_fields": ["id", "name", "repo"],
+      "plugin_required_fields": [
+        "id",
+        "name",
+        "repo"
+      ],
       "plugin_optional_fields": [
         "description",
         "branch",
@@ -17,7 +21,9 @@
         "compatibility",
         "x-<vendor-field>"
       ],
-      "reserved_prefixes": ["x-"],
+      "reserved_prefixes": [
+        "x-"
+      ],
       "notes": [
         "Unknown top-level and plugin-level fields must be ignored by clients.",
         "New plugin API fields must be additive first; removals require deprecation cycle."
@@ -155,7 +161,9 @@
         "notifications",
         "polkit"
       ],
-      "requirements": ["pkexec"],
+      "requirements": [
+        "pkexec"
+      ],
       "api_min_version": 1,
       "api_target_version": 1,
       "permissions": {
@@ -296,6 +304,26 @@
         "notifications"
       ],
       "requirements": [],
+      "api_min_version": 1,
+      "api_target_version": 1,
+      "permissions": {}
+    },
+    {
+      "id": "lock_keys_osd",
+      "name": "Lock Keys OSD",
+      "description": "Caps Lock / Num Lock bar chips with click toggle, OSD popup, and optional desktop notifications.",
+      "repo": "https://github.com/gab-luz/hanauta-plugin-lock-keys",
+      "branch": "main",
+      "path": "",
+      "entrypoint": "lock_keys_osd.py",
+      "capabilities": [
+        "status_chips",
+        "notifications"
+      ],
+      "requirements": [
+        "xset",
+        "notify-send"
+      ],
       "api_min_version": 1,
       "api_target_version": 1,
       "permissions": {}
