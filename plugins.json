@@ -265,6 +265,23 @@
       "api_min_version": 1,
       "api_target_version": 1,
       "permissions": {}
+    },
+    {
+      "id": "crypto_widget",
+      "name": "Crypto Widget",
+      "description": "Crypto market popup with tracked prices, charts, and bar integration.",
+      "repo": "https://github.com/gab-luz/hanauta-plugin-crypto",
+      "branch": "main",
+      "path": "",
+      "entrypoint": "crypto_widget.py",
+      "capabilities": [
+        "status_chips",
+        "notifications"
+      ],
+      "requirements": [],
+      "api_min_version": 1,
+      "api_target_version": 1,
+      "permissions": {}
     }
   ]
 }
