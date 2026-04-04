@@ -249,6 +249,22 @@
       "api_min_version": 1,
       "api_target_version": 1,
       "permissions": {}
+    },
+    {
+      "id": "obs_widget",
+      "name": "OBS Widget",
+      "description": "OBS control popup with WebSocket stream/record/scene actions and bar integration.",
+      "repo": "https://github.com/gab-luz/hanauta-plugin-obs",
+      "branch": "main",
+      "path": "",
+      "entrypoint": "obs_widget.py",
+      "capabilities": [
+        "status_chips"
+      ],
+      "requirements": [],
+      "api_min_version": 1,
+      "api_target_version": 1,
+      "permissions": {}
     }
   ]
 }
