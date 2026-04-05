@@ -18,6 +18,7 @@
         "api_min_version",
         "api_target_version",
         "permissions",
+        "shortcuts",
         "compatibility",
         "x-<vendor-field>"
       ],
@@ -107,7 +108,8 @@
       "requirements": "optional list of runtime requirements, e.g. pkexec",
       "api_min_version": "optional int, minimum host plugin API required",
       "api_target_version": "optional int, host API version the plugin is built against",
-      "permissions": "optional object for explicit runtime intents (polkit, notifications, overlay, network, fs)"
+      "permissions": "optional object for explicit runtime intents (polkit, notifications, overlay, network, fs)",
+      "shortcuts": "optional list of requested keyboard shortcuts: [{keys, command, description}]"
     }
   },
   "plugins": [
@@ -307,6 +309,27 @@
       "api_min_version": 1,
       "api_target_version": 1,
       "permissions": {}
+    },
+    {
+      "id": "wallpaper_manager",
+      "name": "Wallpaper Manager",
+      "description": "Wallpaper manager popup and browser with local/community source support.",
+      "repo": "https://github.com/gab-luz/hanauta-plugin-wallpaper-manager",
+      "branch": "main",
+      "path": "",
+      "entrypoint": "wallpaper_manager.py",
+      "capabilities": [],
+      "requirements": [],
+      "api_min_version": 1,
+      "api_target_version": 1,
+      "permissions": {},
+      "shortcuts": [
+        {
+          "keys": "SUPER W",
+          "command": "exec --no-startup-id \"$HOME/.config/i3/hanauta/scripts/open_wallpaper_manager.sh\"",
+          "description": "Open wallpaper manager"
+        }
+      ]
     },
     {
       "id": "lock_keys_osd",
