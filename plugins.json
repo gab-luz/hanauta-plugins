@@ -332,6 +332,29 @@
       ]
     },
     {
+      "id": "smartlayout_widget",
+      "name": "Smart Layout",
+      "description": "Workspace layout launcher with guided i3 app placement and bar integration.",
+      "repo": "https://github.com/gab-luz/hanauta-plugin-smartlayout",
+      "branch": "main",
+      "path": "",
+      "entrypoint": "layout_flow_app.py",
+      "capabilities": [
+        "status_chips"
+      ],
+      "requirements": [],
+      "api_min_version": 1,
+      "api_target_version": 1,
+      "permissions": {},
+      "shortcuts": [
+        {
+          "keys": "SUPER S",
+          "command": "exec --no-startup-id python3 \"$HOME/dev/hanauta-plugin-smartlayout/layout_flow_app.py\"",
+          "description": "Open Smart Layout"
+        }
+      ]
+    },
+    {
       "id": "lock_keys_osd",
       "name": "Lock Keys OSD",
       "description": "Caps Lock / Num Lock bar chips with click toggle, OSD popup, and optional desktop notifications.",
