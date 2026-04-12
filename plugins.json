@@ -373,6 +373,20 @@
       "api_min_version": 1,
       "api_target_version": 1,
       "permissions": {}
+    },
+    {
+      "id": "ntfy_widget",
+      "name": "ntfy",
+      "description": "ntfy popup widget for publishing quick push notifications.",
+      "repo": "https://github.com/gab-luz/hanauta-plugin-ntfy",
+      "branch": "main",
+      "path": "",
+      "entrypoint": "ntfy_popup.py",
+      "capabilities": [],
+      "requirements": [],
+      "api_min_version": 1,
+      "api_target_version": 1,
+      "permissions": {}
     }
   ]
 }
