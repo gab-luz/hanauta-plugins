@@ -387,6 +387,43 @@
       "api_min_version": 1,
       "api_target_version": 1,
       "permissions": {}
+    },
+    {
+      "id": "ai_popup",
+      "name": "AI Popup",
+      "description": "Hanauta AI popup with shared model installs and local TTS server.",
+      "repo": "https://github.com/gab-luz/hanauta-plugin-ai-popup",
+      "branch": "main",
+      "path": "",
+      "entrypoint": "ai_popup.py",
+      "capabilities": [
+        "notifications"
+      ],
+      "requirements": [],
+      "api_min_version": 1,
+      "api_target_version": 1,
+      "permissions": {
+        "network": true
+      }
+    },
+    {
+      "id": "lango",
+      "name": "Lango",
+      "description": "Duolingo-style lessons + story mode language game. Uses AI Popup for shared TTS installs.",
+      "repo": "https://github.com/gab-luz/hanauta-plugin-lango",
+      "branch": "main",
+      "path": "",
+      "entrypoint": "lango_popup.py",
+      "capabilities": [
+        "notifications"
+      ],
+      "requirements": [],
+      "api_min_version": 1,
+      "api_target_version": 1,
+      "permissions": {},
+      "x-dependencies": [
+        "ai_popup"
+      ]
     }
   ]
 }
