@@ -243,6 +243,22 @@
       }
     },
     {
+      "id": "wifi_control",
+      "name": "WiFi Control",
+      "description": "WiFi control popup with quick toggle and network selection.",
+      "repo": "https://github.com/gab-luz/hanauta-plugin-wifi-control",
+      "branch": "main",
+      "path": "",
+      "entrypoint": "",
+      "capabilities": [],
+      "requirements": [],
+      "api_min_version": 1,
+      "api_target_version": 1,
+      "permissions": {
+        "network": true
+      }
+    },
+    {
       "id": "game_mode",
       "name": "Game Mode",
       "description": "Game Mode popup with gamemoded status insights and bar integration.",
