@@ -27,6 +27,13 @@ AI agents updating plugin code or metadata must follow these rules.
 - If plugin needs additional root runtime dependencies (for example `resolvconf`), install them during privileged install.
 - Avoid requiring users to run extra manual commands after Marketplace install.
 
+## Hanauta API Integration
+
+- Plugin repositories should expose a `hanauta_plugin.py` with `register_hanauta_plugin()` so Hanauta can discover plugin UI/services through the host API.
+- Launch plugin entry scripts through API helpers (for example `entry_command` and `run_bg`) instead of hardcoded shell commands.
+- Runtime paths must avoid hardcoded root-owned locations like `/hanauta/...`; prefer plugin API context, `HANAUTA_ROOT`, or user-writable fallbacks under `~/.local/share/hanauta`.
+- If a plugin has standalone scripts (example: wallpaper manager), keep the launcher and service-section wiring in `hanauta_plugin.py` inside the plugin repo.
+
 ## Update Workflow
 
 1. Change plugin repo code in `/home/gabi/dev/hanauta-plugin-*`.
