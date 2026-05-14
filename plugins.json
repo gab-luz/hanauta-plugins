@@ -440,6 +440,20 @@
       "x-dependencies": [
         "ai_popup"
       ]
+    },
+    {
+      "id": "window_switcher",
+      "name": "Window Switcher",
+      "description": "Horizontal i3 window switcher popup for fast keyboard navigation between open windows.",
+      "repo": "https://github.com/gab-luz/hanauta-plugin-window-switcher",
+      "branch": "main",
+      "path": "",
+      "entrypoint": "window_switcher.py",
+      "capabilities": [],
+      "requirements": [],
+      "api_min_version": 1,
+      "api_target_version": 1,
+      "permissions": {}
     }
   ]
 }
