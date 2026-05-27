@@ -478,6 +478,24 @@
       },
       "icon_url": "https://raw.githubusercontent.com/gab-luz/hanauta-plugin-kdeconnect/main/assets/icon.svg",
       "icon_color_url": "https://raw.githubusercontent.com/gab-luz/hanauta-plugin-kdeconnect/main/assets/icon_color.svg"
+    },
+    {
+      "id": "hanauta_mail",
+      "name": "Hanauta Mail",
+      "description": "Standalone Hanauta Mail plugin extracted from core Hanauta with desktop entry helpers and mail storage integration.",
+      "repo": "https://github.com/gab-luz/hanauta-plugin-mail",
+      "branch": "main",
+      "path": "",
+      "entrypoint": "hanauta_plugin.py",
+      "capabilities": [
+        "notifications",
+        "permissions_manifest"
+      ],
+      "requirements": [],
+      "api_min_version": 1,
+      "api_target_version": 1,
+      "permissions": {},
+      "icon_url": "https://raw.githubusercontent.com/gab-luz/hanauta-plugin-mail/main/assets/hanauta-mail.svg"
     }
   ]
 }
