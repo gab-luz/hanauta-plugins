@@ -454,6 +454,30 @@
       "api_min_version": 1,
       "api_target_version": 1,
       "permissions": {}
+    },
+    {
+      "id": "kdeconnect",
+      "name": "KDE Connect",
+      "description": "KDE Connect integration with privacy-first defaults. On install, clipboard sync, MPRIS, and media controls start disabled until user enables them.",
+      "repo": "https://github.com/gab-luz/hanauta-plugin-kdeconnect",
+      "branch": "main",
+      "path": "",
+      "entrypoint": "",
+      "capabilities": [
+        "dbus",
+        "notifications",
+        "permissions_manifest"
+      ],
+      "requirements": [
+        "kdeconnect-cli"
+      ],
+      "api_min_version": 1,
+      "api_target_version": 1,
+      "permissions": {
+        "network": true
+      },
+      "icon_url": "https://raw.githubusercontent.com/gab-luz/hanauta-plugin-kdeconnect/main/assets/icon.svg",
+      "icon_color_url": "https://raw.githubusercontent.com/gab-luz/hanauta-plugin-kdeconnect/main/assets/icon_color.svg"
     }
   ]
 }
