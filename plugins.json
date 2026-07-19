@@ -533,6 +533,22 @@
       "api_min_version": 1,
       "api_target_version": 1,
       "permissions": {}
+    },
+    {
+      "id": "weather_widget",
+      "name": "Weather Widget",
+      "description": "Weather popup with forecast, air quality, and alerts. Uses Open-Meteo (free), wttr.in fallback, or optional OpenWeatherMap API key.",
+      "repo": "https://github.com/gab-luz/hanauta-plugin-weather",
+      "branch": "main",
+      "path": "",
+      "entrypoint": "weather_popup.py",
+      "capabilities": [],
+      "requirements": [],
+      "api_min_version": 1,
+      "api_target_version": 1,
+      "permissions": {},
+      "icon_url": "https://raw.githubusercontent.com/gab-luz/hanauta-plugin-weather/main/assets/icon.svg",
+      "icon_color_url": "https://raw.githubusercontent.com/gab-luz/hanauta-plugin-weather/main/assets/icon_color.svg"
     }
   ]
 }
